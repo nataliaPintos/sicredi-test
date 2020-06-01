@@ -1,0 +1,29 @@
+button {
+  background: #0E7C7B;
+  border: none;
+  color: #ffffff;
+  height: 40px;
+  margin-right: 10px;
+  width: 70px;
+}
+
+.buttons-container .delete {
+  background: #D62246;
+}
+
+.buttons-container button:hover{
+  background: #949BA0;
+}
+
+.buttons-container {
+  flex-direction: row;
+}
+
+.dragon-form {
+  align-items: center;
+  color: #4d4b4b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+

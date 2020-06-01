@@ -35,7 +35,7 @@ class HomePage extends React.Component {
           <ul className="dragons">
             {dragons.map((dragon) =>
               <li className="dragon-card" key={dragon.id}>
-                <DragonForm name={dragon.name} type={dragon.type} createdAt={dragon.createdAt} id={dragon.id}></DragonForm>
+                <DragonForm name={dragon.name} type={dragon.type} createdAt={dragon.createdAt} id={dragon.id} history={dragon.histories[0]} detail={false}></DragonForm>
               </li>
             )}
           </ul>

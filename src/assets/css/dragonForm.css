@@ -27,3 +27,9 @@ button {
   justify-content: center;
 }
 
+.detail-link {
+  text-decoration: none;
+  color: #4d4b4b;
+  margin-top: 5px;
+}
+

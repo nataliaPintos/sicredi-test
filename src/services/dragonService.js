@@ -5,13 +5,24 @@ export const dragonService = {
     deleteDragon,
     putDragon,
     listDragons,
-    postDragon
+    postDragon,
+    getDragon
 };
 
 // delete dragon by id
 function deleteDragon(id) {
   try {
     const resp =  Axios.delete(apiUrl + id);
+    return resp;
+  } catch (error) {
+    console.error(error);
+  }        
+}
+
+// get dragon by id
+function getDragon(id) {
+  try {
+    const resp =  Axios.get(apiUrl + id);
     return resp;
   } catch (error) {
     console.error(error);
@@ -33,9 +44,8 @@ async function postDragon(data) {
   const resp = await Axios.post(apiUrl, {
     name: data.name,
     type: data.type,
-    histories:[]
+    histories:[data.history]
   })
-  console.log(resp)
 }
 
 // edit dragon information by id
@@ -44,8 +54,7 @@ async function putDragon(data) {
     name: data.name,
     type: data.type,
     createdAt: data.createdAt,
-    histories:[]
+    histories:[data.history]
   })
-  console.log(resp)
 }
 

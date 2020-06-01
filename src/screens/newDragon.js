@@ -13,7 +13,7 @@ class NewDragon extends React.Component {
     return (
       <div className="container-box">
        <div className="login-box">
-         <DragonForm></DragonForm>
+         <DragonForm detail={true}></DragonForm>
        </div>
       </div>
     );

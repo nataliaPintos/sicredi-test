@@ -21,7 +21,7 @@ class HomePage extends React.Component {
       dragons: { loading: true }
     });
     // get list of dragons
-    dragonService.listDragons().then(dragons => this.setState({ dragons: dragons.data }));
+    dragonService.listDragons().then(dragons => this.setState({ dragons: dragons.data.sort((a, b) => a.name.localeCompare(b.name)) }));
   }
 
   render() {

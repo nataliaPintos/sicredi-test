@@ -41,20 +41,28 @@ function listDragons() {
 
 // add new dragon
 async function postDragon(data) {
-  const resp = await Axios.post(apiUrl, {
-    name: data.name,
-    type: data.type,
-    histories:[data.history]
-  })
+  try {
+    const resp = await Axios.post(apiUrl, {
+      name: data.name,
+      type: data.type,
+      histories:[data.history]
+    })
+  } catch (error) {
+    
+  }
 }
 
 // edit dragon information by id
 async function putDragon(data) {
-  const resp = await Axios.put(apiUrl + data.id, {
-    name: data.name,
-    type: data.type,
-    createdAt: data.createdAt,
-    histories:[data.history]
-  })
+  try {
+    const resp = await Axios.put(apiUrl + data.id, {
+      name: data.name,
+      type: data.type,
+      createdAt: data.createdAt,
+      histories:[data.history]
+    })
+  } catch (error) {
+    console.error(error);
+  }
 }
 

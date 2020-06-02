@@ -11,3 +11,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 If you are not logged in, then you should be redirected to [http://localhost:3000/login](http://localhost:3000/login).
 
 The basic username and password is `teste`.
+
+### `npm test`
+
+To run tests on pages and components appearance.
